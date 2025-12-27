@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hôtellerie & housekeeping | HygiLog</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../style.css" />
+</head>
+<body data-category="Hôtellerie & housekeeping">
+  <header>
+    <div class="top-bar">
+      <span>Housekeeping rapide, zéro trace et parfums signature.</span>
+      <span class="badge">Expérience client</span>
+    </div>
+    <nav>
+      <div class="brand">
+        <div class="brand-mark">HL</div>
+        <div>
+          <div>HygiLog</div>
+          <small style="color: var(--grey);">Hôtellerie & housekeeping</small>
+        </div>
+      </div>
+      <ul>
+        <li><a href="../index.html#product-section">Catalogue</a></li>
+        <li><a href="../blog.html">Blog</a></li>
+        <li><a href="../index.html#contact">Contact</a></li>
+      </ul>
+      <a class="btn" href="../index.html">Retour à l'accueil</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div>
+        <p class="badge" style="display:inline-flex; align-items:center; gap:8px; background:rgba(132,74,12,0.12);">Hôtels, résidences, conciergeries</p>
+        <h1>Des chambres impeccables, moins de plastique et plus de cohérence.</h1>
+        <p>Anti-calcaire, désinfectants mains invités, microfibres codées et recharges concentrées pour limiter les déchets sans sacrifier l'expérience client.</p>
+        <div class="hero-badges">
+          <span class="badge">Zéro trace salles de bains</span>
+          <span class="badge">Parfum signature</span>
+          <span class="badge">Recharges concentrées</span>
+        </div>
+        <div class="actions">
+          <a class="btn" href="#catalog">Sélection housekeeping</a>
+          <a class="btn secondary" href="../articles/housekeeping-hotel.html">Guide housekeeping</a>
+        </div>
+      </div>
+      <div class="panel">
+        <div class="section-title">
+          <h2>Indicateurs housekeeping</h2>
+          <span class="badge badge-blue">Hôtellerie</span>
+        </div>
+        <div class="grid-3">
+          <div class="card">
+            <div class="metric"><strong>-25%</strong> plastique</div>
+            <p>Recharges concentrées et flacons réutilisables pour les étages.</p>
+          </div>
+          <div class="card">
+            <div class="metric"><strong>+0.3</strong> point NPS</div>
+            <p>Parfums cohérents dans les chambres et salles de bains.</p>
+          </div>
+          <div class="card">
+            <div class="metric"><strong>-10 min</strong> par étage</div>
+            <p>Microfibres codées et produits multi-usages pour accélérer les rotations.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="catalog" style="padding: 24px 4vw 24px;">
+      <div class="section-title">
+        <h2>Produits Hôtellerie & housekeeping</h2>
+        <span class="badge">FDS & parfums cohérents</span>
+      </div>
+      <p class="muted">Solutions pour salles de bains, chambres et parties communes avec documents téléchargeables.</p>
+      <div class="filters" id="filter-container"></div>
+      <div id="catalog-status" class="catalog-status" aria-live="polite"></div>
+      <div class="grid-3" id="product-grid"></div>
+    </section>
+
+    <section style="padding: 16px 4vw 32px;">
+      <div class="section-title">
+        <h2>Ressources housekeeping</h2>
+        <span class="badge">Expérience client</span>
+      </div>
+      <div class="grid-3">
+        <div class="card">
+          <h3>Check-list chambre</h3>
+          <p>Fiches rapides par zone : salle de bain, chambre, parties communes.</p>
+          <a class="btn secondary" href="../articles/housekeeping-hotel.html">Voir la fiche</a>
+        </div>
+        <div class="card">
+          <h3>Parfum signature</h3>
+          <p>Créer une identité olfactive cohérente avec des produits rechargés.</p>
+          <a class="btn secondary" href="../blog.html">Inspiration parfums</a>
+        </div>
+        <div class="card">
+          <h3>Coaching équipes</h3>
+          <p>Former vos équipes housekeeping aux protocoles HygiLog.</p>
+          <a class="btn" href="mailto:hotline@hygilog.fr">Planifier une session</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-grid">
+      <div>
+        <div class="brand">
+          <div class="brand-mark">HL</div>
+          <div>
+            <div>HygiLog</div>
+            <small>Expertise & Pureté</small>
+          </div>
+        </div>
+        <p>Housekeeping accéléré, anti-calcaire durable et parfums cohérents.</p>
+      </div>
+      <div>
+        <h4>Navigation</h4>
+        <p><a href="../index.html">Accueil HygiLog</a><br/><a href="../blog.html">Guides & Blog</a></p>
+      </div>
+      <div>
+        <h4>Contact express</h4>
+        <p>hotline@hygilog.fr<br/>+33 1 80 20 20 80</p>
+      </div>
+    </div>
+  </footer>
+
+  <div class="modal" id="product-modal" aria-hidden="true">
+    <div class="modal-content">
+      <div class="modal-header">
+        <div>
+          <h3 id="modal-title"></h3>
+          <p id="modal-subtitle" style="margin: 0; color: var(--grey);"></p>
+        </div>
+        <button class="close-btn" aria-label="Fermer" onclick="closeModal()">✕</button>
+      </div>
+      <div class="split">
+        <div>
+          <p id="modal-description"></p>
+          <div class="tags" id="modal-tags"></div>
+          <div class="downloads" id="modal-downloads"></div>
+          <div class="reco" id="modal-reco"></div>
+        </div>
+        <div>
+          <div class="panel" style="padding:18px;">
+            <h4>Notes & Avis</h4>
+            <div id="modal-rating" style="font-weight:700;"></div>
+            <div class="review-list" id="review-list"></div>
+            <form id="review-form">
+              <input type="text" name="name" placeholder="Votre nom" required />
+              <select name="rating" required>
+                <option value="5">5 - Excellent</option>
+                <option value="4">4 - Très bien</option>
+                <option value="3">3 - Moyen</option>
+                <option value="2">2 - À améliorer</option>
+                <option value="1">1 - Insuffisant</option>
+              </select>
+              <textarea name="comment" rows="3" placeholder="Votre retour" required></textarea>
+              <button class="btn" type="submit">Publier l'avis</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="../script.js"></script>
+</body>
+</html>

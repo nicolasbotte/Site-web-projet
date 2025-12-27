@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Santé & Bloc opératoire | HygiLog</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../style.css" />
+</head>
+<body data-category="Santé & Bloc opératoire">
+  <header>
+    <div class="top-bar">
+      <span>Désinfection spectre large, traçabilité FDS, protocoles bloc opératoire.</span>
+      <span class="badge">Hygiène hospitalière</span>
+    </div>
+    <nav>
+      <div class="brand">
+        <div class="brand-mark">HL</div>
+        <div>
+          <div>HygiLog</div>
+          <small style="color: var(--grey);">Santé & Bloc opératoire</small>
+        </div>
+      </div>
+      <ul>
+        <li><a href="../index.html#product-section">Catalogue</a></li>
+        <li><a href="../blog.html">Blog</a></li>
+        <li><a href="../index.html#contact">Contact</a></li>
+      </ul>
+      <a class="btn" href="../index.html">Retour à l'accueil</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div>
+        <p class="badge" style="display:inline-flex; align-items:center; gap:8px; background:rgba(12,39,71,0.15);">Blocs opératoires, laboratoires, EHPAD</p>
+        <h1>Protocoles santé : efficacité virucide et confort des équipes.</h1>
+        <p>HygiLog référence des désinfectants conformes EN14476, des équipements microfibres et des EPI pour sécuriser les rotations, avec fiches de traçabilité téléchargeables.</p>
+        <div class="hero-badges">
+          <span class="badge">EN14476 & spectre large</span>
+          <span class="badge">Traçabilité FDS</span>
+          <span class="badge">EPI prêts à l'emploi</span>
+        </div>
+        <div class="actions">
+          <a class="btn" href="#catalog">Voir la sélection santé</a>
+          <a class="btn secondary" href="../articles/desinfection-hopital.html">Lire le protocole bloc</a>
+        </div>
+      </div>
+      <div class="panel">
+        <div class="section-title">
+          <h2>Résultats terrain</h2>
+          <span class="badge badge-blue">Bloc opératoire</span>
+        </div>
+        <div class="grid-3">
+          <div class="card">
+            <div class="metric"><strong>60s</strong> temps de contact</div>
+            <p>Virucidie rapide pour réduire l'immobilisation des salles.</p>
+          </div>
+          <div class="card">
+            <div class="metric"><strong>100%</strong> fiches disponibles</div>
+            <p>FDS et notices téléchargeables pour chaque produit utilisé.</p>
+          </div>
+          <div class="card">
+            <div class="metric"><strong>-20%</strong> TMS</div>
+            <p>Microfibres codées et EPI adaptés pour limiter les gestes pénibles.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="catalog" style="padding: 24px 4vw 24px;">
+      <div class="section-title">
+        <h2>Produits Santé & Bloc opératoire</h2>
+        <span class="badge">Désinfection & EPI</span>
+      </div>
+      <p class="muted">Accédez aux désinfectants, chariots et consommables prêts pour le milieu hospitalier, avec avis vérifiés.</p>
+      <div class="filters" id="filter-container"></div>
+      <div id="catalog-status" class="catalog-status" aria-live="polite"></div>
+      <div class="grid-3" id="product-grid"></div>
+    </section>
+
+    <section style="padding: 16px 4vw 32px;">
+      <div class="section-title">
+        <h2>Ressources santé</h2>
+        <span class="badge">Bloc & services</span>
+      </div>
+      <div class="grid-3">
+        <div class="card">
+          <h3>Traçabilité FDS</h3>
+          <p>Classeurs numériques à jour pour répondre aux audits internes.</p>
+          <a class="btn secondary" href="../assets/docs/fiche-donnees-securite-desisafe.pdf" download>Télécharger un exemple</a>
+        </div>
+        <div class="card">
+          <h3>Protocoles linge & déchets</h3>
+          <p>Fiches pratiques sur la collecte, le stockage et l'évacuation sécurisée.</p>
+          <a class="btn secondary" href="../blog.html">Voir les bonnes pratiques</a>
+        </div>
+        <div class="card">
+          <h3>Support équipe</h3>
+          <p>Hotline HygiLog 6j/7 pour répondre aux questions des soignants.</p>
+          <a class="btn" href="mailto:hotline@hygilog.fr">Contacter un expert</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-grid">
+      <div>
+        <div class="brand">
+          <div class="brand-mark">HL</div>
+          <div>
+            <div>HygiLog</div>
+            <small>Expertise & Pureté</small>
+          </div>
+        </div>
+        <p>Hygiène hospitalière avec preuves réglementaires et accompagnement terrain.</p>
+      </div>
+      <div>
+        <h4>Navigation</h4>
+        <p><a href="../index.html">Accueil HygiLog</a><br/><a href="../blog.html">Guides & Blog</a></p>
+      </div>
+      <div>
+        <h4>Contact express</h4>
+        <p>hotline@hygilog.fr<br/>+33 1 80 20 20 80</p>
+      </div>
+    </div>
+  </footer>
+
+  <div class="modal" id="product-modal" aria-hidden="true">
+    <div class="modal-content">
+      <div class="modal-header">
+        <div>
+          <h3 id="modal-title"></h3>
+          <p id="modal-subtitle" style="margin: 0; color: var(--grey);"></p>
+        </div>
+        <button class="close-btn" aria-label="Fermer" onclick="closeModal()">✕</button>
+      </div>
+      <div class="split">
+        <div>
+          <p id="modal-description"></p>
+          <div class="tags" id="modal-tags"></div>
+          <div class="downloads" id="modal-downloads"></div>
+          <div class="reco" id="modal-reco"></div>
+        </div>
+        <div>
+          <div class="panel" style="padding:18px;">
+            <h4>Notes & Avis</h4>
+            <div id="modal-rating" style="font-weight:700;"></div>
+            <div class="review-list" id="review-list"></div>
+            <form id="review-form">
+              <input type="text" name="name" placeholder="Votre nom" required />
+              <select name="rating" required>
+                <option value="5">5 - Excellent</option>
+                <option value="4">4 - Très bien</option>
+                <option value="3">3 - Moyen</option>
+                <option value="2">2 - À améliorer</option>
+                <option value="1">1 - Insuffisant</option>
+              </select>
+              <textarea name="comment" rows="3" placeholder="Votre retour" required></textarea>
+              <button class="btn" type="submit">Publier l'avis</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="../script.js"></script>
+</body>
+</html>

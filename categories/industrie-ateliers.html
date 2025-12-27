@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Industrie & ateliers | HygiLog</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../style.css" />
+</head>
+<body data-category="Industrie & ateliers">
+  <header>
+    <div class="top-bar">
+      <span>Dégraissage lourd, SGH clair et sécurité chimique pour ateliers.</span>
+      <span class="badge">Industrie</span>
+    </div>
+    <nav>
+      <div class="brand">
+        <div class="brand-mark">HL</div>
+        <div>
+          <div>HygiLog</div>
+          <small style="color: var(--grey);">Industrie & ateliers</small>
+        </div>
+      </div>
+      <ul>
+        <li><a href="../index.html#product-section">Catalogue</a></li>
+        <li><a href="../blog.html">Blog</a></li>
+        <li><a href="../index.html#contact">Contact</a></li>
+      </ul>
+      <a class="btn" href="../index.html">Retour à l'accueil</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div>
+        <p class="badge" style="display:inline-flex; align-items:center; gap:8px; background:rgba(99,62,255,0.12);">Ateliers mécaniques, maintenance, usines</p>
+        <h1>Dégraissage industriel et sécurité des opérateurs.</h1>
+        <p>Formulations solvants et aqueuses, plans de prévention, EPI robustes et affichage SGH pour garder le contrôle sur vos sites industriels.</p>
+        <div class="hero-badges">
+          <span class="badge">Dégraissants haute performance</span>
+          <span class="badge">Sécurité chimique</span>
+          <span class="badge">EPI résistants</span>
+        </div>
+        <div class="actions">
+          <a class="btn" href="#catalog">Voir la sélection industrie</a>
+          <a class="btn secondary" href="../articles/industrie-degraissage.html">Lire le guide dégraissage</a>
+        </div>
+      </div>
+      <div class="panel">
+        <div class="section-title">
+          <h2>Indicateurs sécurité</h2>
+          <span class="badge badge-blue">Industrie</span>
+        </div>
+        <div class="grid-3">
+          <div class="card">
+            <div class="metric"><strong>100%</strong> pictos SGH</div>
+            <p>Affichage clair sur les postes et fiches à jour.</p>
+          </div>
+          <div class="card">
+            <div class="metric"><strong>-15%</strong> temps d'arrêt</div>
+            <p>Produits adaptés qui réduisent les temps de nettoyage en maintenance.</p>
+          </div>
+          <div class="card">
+            <div class="metric"><strong>+25%</strong> confort EPI</div>
+            <p>Gants et équipements adaptés aux solvants pour limiter la fatigue.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="catalog" style="padding: 24px 4vw 24px;">
+      <div class="section-title">
+        <h2>Produits Industrie & ateliers</h2>
+        <span class="badge">Dégraissage & sécurité</span>
+      </div>
+      <p class="muted">Références pour ateliers mécaniques et industriels avec documents téléchargeables.</p>
+      <div class="filters" id="filter-container"></div>
+      <div id="catalog-status" class="catalog-status" aria-live="polite"></div>
+      <div class="grid-3" id="product-grid"></div>
+    </section>
+
+    <section style="padding: 16px 4vw 32px;">
+      <div class="section-title">
+        <h2>Ressources ateliers</h2>
+        <span class="badge">Sécurité</span>
+      </div>
+      <div class="grid-3">
+        <div class="card">
+          <h3>Affichage SGH</h3>
+          <p>Plan d'affichage prêt à apposer sur les postes sensibles.</p>
+          <a class="btn secondary" href="../assets/docs/fiche-donnees-securite-desisafe.pdf" download>Afficher un exemple</a>
+        </div>
+        <div class="card">
+          <h3>Fontaine de dégraissage</h3>
+          <p>Guide d'installation et de maintenance pour limiter les risques.</p>
+          <a class="btn secondary" href="../articles/industrie-degraissage.html">Lire le guide</a>
+        </div>
+        <div class="card">
+          <h3>Coaching sécurité</h3>
+          <p>Sessions d'1h pour briefer vos équipes sur les bonnes pratiques EPI.</p>
+          <a class="btn" href="mailto:hotline@hygilog.fr">Prendre RDV</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-grid">
+      <div>
+        <div class="brand">
+          <div class="brand-mark">HL</div>
+          <div>
+            <div>HygiLog</div>
+            <small>Expertise & Pureté</small>
+          </div>
+        </div>
+        <p>Dégraissage industriel, sécurité chimique et accompagnement HygiLog.</p>
+      </div>
+      <div>
+        <h4>Navigation</h4>
+        <p><a href="../index.html">Accueil HygiLog</a><br/><a href="../blog.html">Guides & Blog</a></p>
+      </div>
+      <div>
+        <h4>Contact express</h4>
+        <p>hotline@hygilog.fr<br/>+33 1 80 20 20 80</p>
+      </div>
+    </div>
+  </footer>
+
+  <div class="modal" id="product-modal" aria-hidden="true">
+    <div class="modal-content">
+      <div class="modal-header">
+        <div>
+          <h3 id="modal-title"></h3>
+          <p id="modal-subtitle" style="margin: 0; color: var(--grey);"></p>
+        </div>
+        <button class="close-btn" aria-label="Fermer" onclick="closeModal()">✕</button>
+      </div>
+      <div class="split">
+        <div>
+          <p id="modal-description"></p>
+          <div class="tags" id="modal-tags"></div>
+          <div class="downloads" id="modal-downloads"></div>
+          <div class="reco" id="modal-reco"></div>
+        </div>
+        <div>
+          <div class="panel" style="padding:18px;">
+            <h4>Notes & Avis</h4>
+            <div id="modal-rating" style="font-weight:700;"></div>
+            <div class="review-list" id="review-list"></div>
+            <form id="review-form">
+              <input type="text" name="name" placeholder="Votre nom" required />
+              <select name="rating" required>
+                <option value="5">5 - Excellent</option>
+                <option value="4">4 - Très bien</option>
+                <option value="3">3 - Moyen</option>
+                <option value="2">2 - À améliorer</option>
+                <option value="1">1 - Insuffisant</option>
+              </select>
+              <textarea name="comment" rows="3" placeholder="Votre retour" required></textarea>
+              <button class="btn" type="submit">Publier l'avis</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="../script.js"></script>
+</body>
+</html>

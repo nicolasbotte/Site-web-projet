@@ -193,6 +193,18 @@ nav a:hover {
   margin: 0 0 8px;
 }
 
+.link-card {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  height: 100%;
+}
+
+.link-card .badge {
+  margin-top: 12px;
+  display: inline-flex;
+}
+
 .metric {
   display: flex;
   align-items: center;

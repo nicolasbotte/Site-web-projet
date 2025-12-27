@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Facility management | HygiLog</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../style.css" />
+</head>
+<body data-category="Facility management">
+  <header>
+    <div class="top-bar">
+      <span>Machines, consommables et reporting pour sites multi-lieux.</span>
+      <span class="badge">Performance FM</span>
+    </div>
+    <nav>
+      <div class="brand">
+        <div class="brand-mark">HL</div>
+        <div>
+          <div>HygiLog</div>
+          <small style="color: var(--grey);">Facility management</small>
+        </div>
+      </div>
+      <ul>
+        <li><a href="../index.html#product-section">Catalogue</a></li>
+        <li><a href="../blog.html">Blog</a></li>
+        <li><a href="../index.html#contact">Contact</a></li>
+      </ul>
+      <a class="btn" href="../index.html">Retour à l'accueil</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div>
+        <p class="badge" style="display:inline-flex; align-items:center; gap:8px; background:rgba(12,167,162,0.15);">Bureaux, centres commerciaux, transport</p>
+        <h1>FM : productivité des équipes et traçabilité des interventions.</h1>
+        <p>HygiLog propose des autolaveuses compactes, des disques adaptés et des solutions de dilution qui sécurisent vos coûts, avec tableaux de bord par site.</p>
+        <div class="hero-badges">
+          <span class="badge">Machines connectées</span>
+          <span class="badge">Dilution contrôlée</span>
+          <span class="badge">Reporting par site</span>
+        </div>
+        <div class="actions">
+          <a class="btn" href="#catalog">Découvrir la sélection FM</a>
+          <a class="btn secondary" href="../articles/entretien-sols.html">Lire le guide sols</a>
+        </div>
+      </div>
+      <div class="panel">
+        <div class="section-title">
+          <h2>KPIs FM</h2>
+          <span class="badge badge-blue">Multisite</span>
+        </div>
+        <div class="grid-3">
+          <div class="card">
+            <div class="metric"><strong>-18%</strong> coûts produits</div>
+            <p>Stations de dilution et consommations tracées par badge.</p>
+          </div>
+          <div class="card">
+            <div class="metric"><strong>+22%</strong> productivité</div>
+            <p>Autolaveuses compactes qui couvrent 1 800 m²/h.</p>
+          </div>
+          <div class="card">
+            <div class="metric"><strong>100%</strong> audits clients validés</div>
+            <p>Documents accessibles en un clic pour les équipes terrain.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="catalog" style="padding: 24px 4vw 24px;">
+      <div class="section-title">
+        <h2>Produits Facility management</h2>
+        <span class="badge">Machines & consommables</span>
+      </div>
+      <p class="muted">Sélection d'autolaveuses, disques et produits sols prêts pour des sites multi-lieux.</p>
+      <div class="filters" id="filter-container"></div>
+      <div id="catalog-status" class="catalog-status" aria-live="polite"></div>
+      <div class="grid-3" id="product-grid"></div>
+    </section>
+
+    <section style="padding: 16px 4vw 32px;">
+      <div class="section-title">
+        <h2>Ressources FM</h2>
+        <span class="badge">Exploitation</span>
+      </div>
+      <div class="grid-3">
+        <div class="card">
+          <h3>Check-list sols</h3>
+          <p>Choisir le bon disque, le bon produit et la bonne vitesse machine.</p>
+          <a class="btn secondary" href="../articles/entretien-sols.html">Lire la check-list</a>
+        </div>
+        <div class="card">
+          <h3>Formation équipes</h3>
+          <p>Modules courts pour former les agents au reporting et aux EPI.</p>
+          <a class="btn secondary" href="../blog.html">Voir les modules</a>
+        </div>
+        <div class="card">
+          <h3>Audit site</h3>
+          <p>Évaluer l'état des sols et définir les routines hebdo/mensuelles.</p>
+          <a class="btn" href="mailto:hotline@hygilog.fr">Planifier un audit</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-grid">
+      <div>
+        <div class="brand">
+          <div class="brand-mark">HL</div>
+          <div>
+            <div>HygiLog</div>
+            <small>Expertise & Pureté</small>
+          </div>
+        </div>
+        <p>Facility management : performance opérationnelle et accompagnement HygiLog.</p>
+      </div>
+      <div>
+        <h4>Navigation</h4>
+        <p><a href="../index.html">Accueil HygiLog</a><br/><a href="../blog.html">Guides & Blog</a></p>
+      </div>
+      <div>
+        <h4>Contact express</h4>
+        <p>hotline@hygilog.fr<br/>+33 1 80 20 20 80</p>
+      </div>
+    </div>
+  </footer>
+
+  <div class="modal" id="product-modal" aria-hidden="true">
+    <div class="modal-content">
+      <div class="modal-header">
+        <div>
+          <h3 id="modal-title"></h3>
+          <p id="modal-subtitle" style="margin: 0; color: var(--grey);"></p>
+        </div>
+        <button class="close-btn" aria-label="Fermer" onclick="closeModal()">✕</button>
+      </div>
+      <div class="split">
+        <div>
+          <p id="modal-description"></p>
+          <div class="tags" id="modal-tags"></div>
+          <div class="downloads" id="modal-downloads"></div>
+          <div class="reco" id="modal-reco"></div>
+        </div>
+        <div>
+          <div class="panel" style="padding:18px;">
+            <h4>Notes & Avis</h4>
+            <div id="modal-rating" style="font-weight:700;"></div>
+            <div class="review-list" id="review-list"></div>
+            <form id="review-form">
+              <input type="text" name="name" placeholder="Votre nom" required />
+              <select name="rating" required>
+                <option value="5">5 - Excellent</option>
+                <option value="4">4 - Très bien</option>
+                <option value="3">3 - Moyen</option>
+                <option value="2">2 - À améliorer</option>
+                <option value="1">1 - Insuffisant</option>
+              </select>
+              <textarea name="comment" rows="3" placeholder="Votre retour" required></textarea>
+              <button class="btn" type="submit">Publier l'avis</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="../script.js"></script>
+</body>
+</html>
