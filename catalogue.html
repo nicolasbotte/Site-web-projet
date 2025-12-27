@@ -3,106 +3,86 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Facility management | HygiLog</title>
+  <title>Catalogue HygiLog | Toutes les références</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../style.css" />
+  <link rel="stylesheet" href="style.css" />
 </head>
-<body data-category="Facility management">
+<body>
   <header>
     <div class="top-bar">
-      <span>Machines, consommables et reporting pour sites multi-lieux.</span>
-      <span class="badge">Performance FM</span>
+      <span>Catalogue complet HygiLog : fiches techniques et FDS téléchargeables.</span>
+      <div class="hero-badges">
+        <span class="badge">Stocks visibles</span>
+        <span class="badge">Livraison J+1</span>
+        <span class="badge">Support technique 6j/7</span>
+      </div>
     </div>
     <nav>
       <div class="brand">
         <div class="brand-mark">HL</div>
         <div>
           <div>HygiLog</div>
-          <small style="color: var(--grey);">Facility management</small>
+          <small style="color: var(--grey);">Catalogue complet</small>
         </div>
       </div>
       <ul>
-        <li><a href="../catalogue.html">Catalogue</a></li>
-        <li><a href="../blog.html">Blog</a></li>
-        <li><a href="../index.html#contact">Contact</a></li>
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="#catalogue">Catalogue</a></li>
+        <li><a href="blog.html">Blog</a></li>
       </ul>
-      <a class="btn" href="../index.html">Retour à l'accueil</a>
+      <a class="btn" href="mailto:hotline@hygilog.fr">Parler à un expert</a>
     </nav>
   </header>
 
   <main>
-    <section class="hero">
+    <section class="hero" style="margin-top:0;">
       <div>
-        <p class="badge" style="display:inline-flex; align-items:center; gap:8px; background:rgba(12,167,162,0.15);">Bureaux, centres commerciaux, transport</p>
-        <h1>FM : productivité des équipes et traçabilité des interventions.</h1>
-        <p>HygiLog propose des autolaveuses compactes, des disques adaptés et des solutions de dilution qui sécurisent vos coûts, avec tableaux de bord par site.</p>
+        <p class="badge" style="display:inline-flex; align-items:center; gap:8px; background:rgba(255,255,255,0.12);">Fiches techniques, FDS et avis clients</p>
+        <h1>Un catalogue pro lisible, filtrable et prêt à partager.</h1>
+        <p>Accédez à toutes les références HygiLog : produits cuisine pro, santé, hôtellerie, industrie et facility management. Chaque fiche produit inclut documents téléchargeables, recommandations de cross-selling et avis clients.</p>
         <div class="hero-badges">
-          <span class="badge">Machines connectées</span>
-          <span class="badge">Dilution contrôlée</span>
-          <span class="badge">Reporting par site</span>
+          <span class="badge">Filtres par univers</span>
+          <span class="badge">Liens vers fiches complètes</span>
+          <span class="badge">Cross-selling contextualisé</span>
         </div>
         <div class="actions">
-          <a class="btn" href="#catalog">Découvrir la sélection FM</a>
-          <a class="btn secondary" href="../articles/entretien-sols.html">Lire le guide sols</a>
+          <a class="btn" href="#catalogue">Parcourir les références</a>
+          <a class="btn secondary" href="mailto:hotline@hygilog.fr">Demander une démo</a>
         </div>
       </div>
       <div class="panel">
         <div class="section-title">
-          <h2>KPIs FM</h2>
-          <span class="badge badge-blue">Multisite</span>
+          <h2>Chiffres catalogue</h2>
+          <span class="badge badge-blue">Hygiène pro</span>
         </div>
         <div class="grid-3">
           <div class="card">
-            <div class="metric"><strong>-18%</strong> coûts produits</div>
-            <p>Stations de dilution et consommations tracées par badge.</p>
+            <div class="metric"><strong>10</strong> fiches produits enrichies</div>
+            <p>Descriptions, avis et documents prêts à partager.</p>
           </div>
           <div class="card">
-            <div class="metric"><strong>+22%</strong> productivité</div>
-            <p>Autolaveuses compactes qui couvrent 1 800 m²/h.</p>
+            <div class="metric"><strong>100%</strong> documents</div>
+            <p>Fiches techniques et FDS téléchargeables en un clic.</p>
           </div>
           <div class="card">
-            <div class="metric"><strong>100%</strong> audits clients validés</div>
-            <p>Documents accessibles en un clic pour les équipes terrain.</p>
+            <div class="metric"><strong>6</strong> univers métiers</div>
+            <p>Cuisine pro, santé, hôtellerie, industrie, FM et RSE.</p>
           </div>
         </div>
       </div>
     </section>
 
-    <section id="catalog" style="padding: 24px 4vw 24px;">
+    <section id="catalogue" style="padding: 24px 4vw 48px;">
       <div class="section-title">
-        <h2>Produits Facility management</h2>
-        <span class="badge">Machines & consommables</span>
+        <h2>Catalogue HygiLog</h2>
+        <span class="badge">Filtres par catégorie</span>
       </div>
-      <p class="muted">Sélection d'autolaveuses, disques et produits sols prêts pour des sites multi-lieux.</p>
+      <p class="muted">Cliquez sur une fiche pour accéder aux détails, documents téléchargeables et avis clients.</p>
       <div class="filters" id="filter-container"></div>
       <div id="catalog-status" class="catalog-status" aria-live="polite"></div>
       <div class="grid-3" id="product-grid"></div>
-    </section>
-
-    <section style="padding: 16px 4vw 32px;">
-      <div class="section-title">
-        <h2>Ressources FM</h2>
-        <span class="badge">Exploitation</span>
-      </div>
-      <div class="grid-3">
-        <div class="card">
-          <h3>Check-list sols</h3>
-          <p>Choisir le bon disque, le bon produit et la bonne vitesse machine.</p>
-          <a class="btn secondary" href="../articles/entretien-sols.html">Lire la check-list</a>
-        </div>
-        <div class="card">
-          <h3>Formation équipes</h3>
-          <p>Modules courts pour former les agents au reporting et aux EPI.</p>
-          <a class="btn secondary" href="../blog.html">Voir les modules</a>
-        </div>
-        <div class="card">
-          <h3>Audit site</h3>
-          <p>Évaluer l'état des sols et définir les routines hebdo/mensuelles.</p>
-          <a class="btn" href="mailto:hotline@hygilog.fr">Planifier un audit</a>
-        </div>
-      </div>
     </section>
   </main>
 
@@ -116,15 +96,16 @@
             <small>Expertise & Pureté</small>
           </div>
         </div>
-        <p>Facility management : performance opérationnelle et accompagnement HygiLog.</p>
+        <p>Un partenaire unique pour vos besoins hygiène, équipements et consommables.</p>
       </div>
       <div>
         <h4>Navigation</h4>
-        <p><a href="../index.html">Accueil HygiLog</a><br/><a href="../blog.html">Guides & Blog</a></p>
+        <p><a href="index.html">Accueil</a><br/><a href="blog.html">Blog</a><br/><a href="categories/cuisine-professionnelle.html">Par univers</a></p>
       </div>
       <div>
         <h4>Contact express</h4>
         <p>hotline@hygilog.fr<br/>+33 1 80 20 20 80</p>
+        <p>Support technique 6j/7 | Livraison J+1 sur 80% du catalogue</p>
       </div>
     </div>
   </footer>
@@ -168,6 +149,6 @@
     </div>
   </div>
 
-  <script src="../script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>

@@ -1,4 +1,4 @@
-const CATALOG_URL = "https://e.gheno.fr/data/catalog.full.json";
+const CATALOG_URL = "/assets/data/catalog.json";
 
 const fallbackProducts = [
   {
@@ -117,6 +117,7 @@ const productGrid = document.getElementById("product-grid");
 const filterContainer = document.getElementById("filter-container");
 const catalogStatus = document.getElementById("catalog-status");
 const pageCategory = document.body?.dataset?.category || null;
+const productPageId = document.body?.dataset?.productId || null;
 let defaultCategory = pageCategory || null;
 const modal = document.getElementById("product-modal");
 const modalTitle = document.getElementById("modal-title");
@@ -129,6 +130,21 @@ const modalRating = document.getElementById("modal-rating");
 const reviewList = document.getElementById("review-list");
 const reviewForm = document.getElementById("review-form");
 let selectedProductId = null;
+
+const productName = document.getElementById("product-name");
+const productSubtitle = document.getElementById("product-subtitle");
+const productCategory = document.getElementById("product-category");
+const productPrice = document.getElementById("product-price");
+const productDescription = document.getElementById("product-description");
+const productTags = document.getElementById("product-tags");
+const productDownloads = document.getElementById("product-downloads");
+const productRecommendations = document.getElementById("product-recommendations");
+const productRating = document.getElementById("product-rating");
+const productHighlights = document.getElementById("product-highlights");
+const productSpecs = document.getElementById("product-specs");
+const productReviews = document.getElementById("product-reviews");
+const productHero = document.getElementById("product-hero");
+const productNotFound = document.getElementById("product-not-found");
 
 function setCatalogStatus(message, tone = "info") {
   if (!catalogStatus) return;
@@ -224,6 +240,22 @@ function normalizeReviews(rawReviews) {
     .filter((r) => r.text);
 }
 
+function normalizeHighlights(source) {
+  const highlights = ensureArray(source.highlights || source.points_forts || source.arguments || source.benefits);
+  if (highlights.length) return highlights;
+  if (source.usage) return ensureArray(source.usage);
+  return ["Accompagnement HygiLog pour la mise en route et la formation terrain."];
+}
+
+function normalizeSpecs(rawSpecs) {
+  if (!rawSpecs) return [];
+  if (Array.isArray(rawSpecs)) return rawSpecs.filter(Boolean);
+  if (typeof rawSpecs !== "object") return [];
+  return Object.entries(rawSpecs)
+    .filter(([, value]) => Boolean(value))
+    .map(([label, value]) => ({ label: formatLabel(label), value }));
+}
+
 function normalizeProduct(raw, index) {
   const source = raw?.fields || raw || {};
   const name =
@@ -237,6 +269,7 @@ function normalizeProduct(raw, index) {
     source.details ||
     source.desc ||
     "Description en cours de rédaction.";
+  const subtitle = source.subtitle || source.sous_titre || source.accroche || description;
   const priceValue =
     source.price || source.prix || source.prix_public || source.prix_ht || source.pu_ht || source.price_ht || source.tarif;
   const tags = normalizeTags(source);
@@ -255,16 +288,24 @@ function normalizeProduct(raw, index) {
       ? reviews.reduce((acc, r) => acc + (Number(r.note) || 0), 0) / reviews.length
       : Number(source.rating || source.note || 4.8) || 4.8;
 
+  const highlights = normalizeHighlights(source);
+  const specs = normalizeSpecs(source.specs || source.caracteristiques || source.attributs);
+  const heroImage = source.image || source.hero || source.visuel || null;
+
   return {
     id,
     name,
     category,
+    subtitle,
     price: formatPrice(priceValue),
     description,
     tags: tags.length ? tags : ["Référence catalogue"],
     downloads,
     recommended: recommended.length ? recommended : ["Conseil hygiène personnalisé"],
     rating,
+    highlights,
+    specs,
+    heroImage,
     reviews: reviews.length
       ? reviews
       : [
@@ -357,12 +398,69 @@ function renderProducts(category = null) {
       </div>
       <div class="reco">Recommandations : ${product.recommended.join(" · ")}</div>
       <div class="actions">
-        <button class="btn" onclick="openProduct('${product.id}')">Voir détail & avis</button>
-        <button class="btn secondary">Ajouter au panier</button>
+        <a class="btn" href="/products/${product.id}.html">Voir la fiche produit</a>
+        <button class="btn secondary" onclick="openProduct('${product.id}')">Voir en aperçu</button>
       </div>
     `;
     productGrid.appendChild(card);
   });
+}
+
+function renderProductPage(product) {
+  if (!product) {
+    if (productNotFound) productNotFound.style.display = "grid";
+    return;
+  }
+
+  if (productNotFound) productNotFound.style.display = "none";
+
+  if (productHero && product.heroImage) {
+    productHero.style.setProperty(
+      "background-image",
+      `linear-gradient(135deg, rgba(12, 39, 71, 0.85), rgba(12, 167, 162, 0.72)), url(${product.heroImage})`,
+    );
+  }
+
+  if (productName) productName.textContent = product.name;
+  if (productSubtitle) productSubtitle.textContent = product.subtitle || product.description;
+  if (productCategory) productCategory.textContent = product.category;
+  if (productPrice) productPrice.textContent = product.price;
+  if (productDescription) productDescription.textContent = product.description;
+
+  if (productTags)
+    productTags.innerHTML = product.tags.map((tag) => `<span class="tag">${tag}</span>`).join("") || "";
+
+  if (productDownloads)
+    productDownloads.innerHTML =
+      product.downloads && product.downloads.length
+        ? product.downloads.map((d) => `<a class="btn secondary" href="${d.path}" download>${d.label}</a>`).join("")
+        : "<span class='muted'>Documents en cours de mise à jour</span>";
+
+  if (productRecommendations)
+    productRecommendations.textContent = `Cross-selling recommandé : ${product.recommended.join(" · ")}`;
+
+  if (productRating) productRating.textContent = `Note moyenne ${product.rating.toFixed(1)} / 5`;
+
+  if (productHighlights)
+    productHighlights.innerHTML = product.highlights
+      .map((h) => `<div class="card"><p>${h}</p></div>`)
+      .join("");
+
+  if (productSpecs)
+    productSpecs.innerHTML =
+      product.specs && product.specs.length
+        ? product.specs
+            .map((spec) => `<div class="card"><strong>${spec.label}</strong><br/><span class="muted">${spec.value}</span></div>`)
+            .join("")
+        : "";
+
+  if (productReviews)
+    productReviews.innerHTML = product.reviews
+      .map(
+        (review) =>
+          `<div class="review"><strong>${review.author}</strong> · ${"★".repeat(Math.max(1, Math.round(review.note)))}<br>${review.text}</div>`,
+      )
+      .join("");
 }
 
 function openProduct(id) {
@@ -434,7 +532,7 @@ async function initCatalog() {
     setCatalogStatus(`Catalogue mis à jour (${products.length} références).`, "success");
   } catch (error) {
     console.error("Catalogue distant indisponible", error);
-    products = fallbackProducts;
+    products = fallbackProducts.map((item, index) => normalizeProduct(item, index));
     setCatalogStatus(
       "Impossible de joindre le flux catalogue. Affichage d'une sélection type HygiLog.",
       "warning",
@@ -447,6 +545,11 @@ async function initCatalog() {
         ? defaultCategory
         : null;
     renderProducts(initialCategory);
+  }
+
+  if (productPageId) {
+    const matchingProduct = products.find((p) => p.id === productPageId);
+    renderProductPage(matchingProduct);
   }
 }
 
