@@ -58,6 +58,57 @@ const fallbackProducts = [
       { author: "Prestataire FM", note: 4, text: "Format compact parfait pour les couloirs étroits." },
     ],
   },
+  {
+    id: "anticalc-glass",
+    name: "AntiCalc Glass+",
+    category: "Hôtellerie & housekeeping",
+    price: "14,20€ HT",
+    description:
+      "Nettoyant anti-calcaire brillance miroir pour salles de bains, avec parfum signature discret et recharges concentrées.",
+    tags: ["Anti-calcaire", "Brillance", "Rechargeable"],
+    downloads: [
+      { label: "Fiche technique", path: "assets/docs/fiche-technique-surface-pro.pdf" },
+    ],
+    recommended: ["Microfibres couleurs", "Parfum d'Accueil", "Cartouche mousse main"],
+    rating: 4.6,
+    reviews: [
+      { author: "Gouvernante", note: 5, text: "Moins de traces et un parfum cohérent avec la chambre." },
+    ],
+  },
+  {
+    id: "solvoff-forte",
+    name: "Solv'Off Forte",
+    category: "Industrie & ateliers",
+    price: "27,90€ HT",
+    description:
+      "Dégraissant industriel base solvants désaromatisés, idéal ateliers mécaniques et maintenance lourde.",
+    tags: ["Solvant", "Dégraissant", "Sécurité chimique"],
+    downloads: [
+      { label: "FDS", path: "assets/docs/fiche-donnees-securite-desisafe.pdf" },
+    ],
+    recommended: ["Absorbants granulaires", "Fontaine de dégraissage", "Gants nitrile heavy"],
+    rating: 4.5,
+    reviews: [
+      { author: "Chef d'atelier", note: 4, text: "Pouvoir solvant élevé sans odeur agressive." },
+    ],
+  },
+  {
+    id: "greenshield-dose",
+    name: "GreenShield Eco Dose",
+    category: "RSE & environnement",
+    price: "19,90€ HT",
+    description:
+      "Pack de doses ultra-concentrées multi-usages avec emballage recyclé, calculateur d'impact CO₂ intégré.",
+    tags: ["Ecolabel", "Concentré", "Recyclé"],
+    downloads: [
+      { label: "Brochure", path: "assets/docs/notice-autolaveuse-glide.pdf" },
+    ],
+    recommended: ["Fontaine de dilution", "Bidon réutilisable", "Formation RSE"],
+    rating: 4.8,
+    reviews: [
+      { author: "Responsable RSE", note: 5, text: "Enfin un calculateur simple pour piloter nos indicateurs." },
+    ],
+  },
 ];
 
 let products = [];
@@ -65,6 +116,8 @@ let products = [];
 const productGrid = document.getElementById("product-grid");
 const filterContainer = document.getElementById("filter-container");
 const catalogStatus = document.getElementById("catalog-status");
+const pageCategory = document.body?.dataset?.category || null;
+let defaultCategory = pageCategory || null;
 const modal = document.getElementById("product-modal");
 const modalTitle = document.getElementById("modal-title");
 const modalSubtitle = document.getElementById("modal-subtitle");
@@ -244,9 +297,11 @@ function renderFilters() {
   if (!products.length) return;
 
   const categories = ["Tous", ...new Set(products.map((p) => p.category || "Autres"))];
+  const initialCategory = defaultCategory && categories.includes(defaultCategory) ? defaultCategory : null;
   categories.forEach((cat, index) => {
     const btn = document.createElement("button");
-    btn.className = `filter-btn ${index === 0 ? "active" : ""}`;
+    const isActive = initialCategory ? cat === initialCategory : index === 0;
+    btn.className = `filter-btn ${isActive ? "active" : ""}`;
     btn.textContent = cat;
     btn.addEventListener("click", () => {
       document.querySelectorAll(".filter-btn").forEach((b) => b.classList.remove("active"));
@@ -255,6 +310,12 @@ function renderFilters() {
     });
     filterContainer.appendChild(btn);
   });
+
+  if (initialCategory) {
+    renderProducts(initialCategory);
+  } else {
+    renderProducts();
+  }
 }
 
 function renderProducts(category = null) {
@@ -380,7 +441,13 @@ async function initCatalog() {
     );
   }
   renderFilters();
-  renderProducts();
+  if (!filterContainer) {
+    const initialCategory =
+      defaultCategory && products.some((product) => product.category === defaultCategory)
+        ? defaultCategory
+        : null;
+    renderProducts(initialCategory);
+  }
 }
 
 initCatalog();
