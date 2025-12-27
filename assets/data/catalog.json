@@ -1,0 +1,298 @@
+[
+  {
+    "id": "surface-pro",
+    "name": "Surface Pro FoodSafe",
+    "category": "Cuisine professionnelle",
+    "subtitle": "Dégraissant alcalin contact alimentaire prêt à l'emploi",
+    "price": "24,90",
+    "description": "Dégraissant puissant compatible contact alimentaire pour hottes, fours et plans de travail.",
+    "tags": ["HACCP", "Contact alimentaire", "Prêt à l'emploi"],
+    "downloads": [
+      { "label": "Fiche technique", "path": "/assets/docs/fiche-technique-surface-pro.pdf" },
+      { "label": "FDS", "path": "/assets/docs/fiche-donnees-securite-surface-pro.pdf" }
+    ],
+    "recommended": ["Éponge inox pro", "Lingettes ReadyDose", "Gants nitrile"],
+    "rating": 4.8,
+    "highlights": [
+      "Neutralise les graisses tenaces en moins de 60s sur inox et vitrocéramique.",
+      "Compatible contact alimentaire et conforme aux protocoles HACCP.",
+      "Format prêt à l'emploi ou bidon 5L pour centrales de dilution."
+    ],
+    "specs": {
+      "ph": "Alcalin contrôlé",
+      "rendement": "Jusqu'à 450 m² dégraissés par bidon",
+      "certifications": "Contact alimentaire",
+      "conditionnement": "Pulvérisateur 750ml / Bidon 5L"
+    },
+    "hero": "https://images.unsplash.com/photo-1482049016688-2d3e1b311543?auto=format&fit=crop&w=1200&q=80",
+    "reviews": [
+      { "author": "Chef de prod", "note": 5, "text": "Pouvoir dégraissant + contact alimentaire, parfait pour nos audits." },
+      { "author": "Responsable QHSE", "note": 4, "text": "Clair, fiches téléchargeables directement pour les équipes." }
+    ]
+  },
+  {
+    "id": "desisafe",
+    "name": "DésiSafe Spectre+",
+    "category": "Santé & Bloc opératoire",
+    "subtitle": "Désinfectant virucide EN14476 temps de contact 60s",
+    "price": "32,50",
+    "description": "Large spectre bactéricide et levuricide pour blocs opératoires, surfaces sensibles et dispositifs externes.",
+    "tags": ["EN14476", "Sans rinçage", "Spectre large"],
+    "downloads": [
+      { "label": "Fiche technique", "path": "/assets/docs/fiche-technique-desisafe.pdf" },
+      { "label": "FDS", "path": "/assets/docs/fiche-donnees-securite-desisafe.pdf" }
+    ],
+    "recommended": ["Lingettes ReadyDose", "Gants nitrile", "Aspirateur HEPA"],
+    "rating": 4.9,
+    "highlights": [
+      "Temps de contact court (60s) pour enchaîner les rotations de salle.",
+      "Large spectre bactéricide, virucide et levuricide validé en labo.",
+      "Compatible avec les matériaux sensibles des équipements bloc."
+    ],
+    "specs": {
+      "normes": "EN14476, EN1276, EN13697",
+      "temps_de_contact": "60 secondes",
+      "parfum": "Sans parfum",
+      "conditionnement": "Flacon 1L avec gâchette / Bidon 5L"
+    },
+    "hero": "https://images.unsplash.com/photo-1585421514738-01798e348b17?auto=format&fit=crop&w=1200&q=80",
+    "reviews": [
+      { "author": "Cadre de santé", "note": 5, "text": "Temps de contact ultra court, pratique pour les rotations de salle." },
+      { "author": "Infirmier hygiéniste", "note": 5, "text": "Documentation claire, dilution maîtrisée." }
+    ]
+  },
+  {
+    "id": "autolaveuse",
+    "name": "Autolaveuse Glide 50",
+    "category": "Facility management",
+    "subtitle": "Autolaveuse compacte Li-Ion avec reporting connecté",
+    "price": "4990",
+    "description": "Autolaveuse batteries Li-Ion, ultra maniable pour couloirs étroits et tableaux de bord d'usage multi-sites.",
+    "tags": ["Connectée", "Batterie Li-Ion", "Reporting"],
+    "downloads": [
+      { "label": "Notice", "path": "/assets/docs/notice-autolaveuse-glide.pdf" },
+      { "label": "FDS batteries", "path": "/assets/docs/fds-batterie-glide.pdf" }
+    ],
+    "recommended": ["Disques haute productivité", "Détergent pH Control", "Station de charge"],
+    "rating": 4.7,
+    "highlights": [
+      "Reporting automatique des heures d'usage par site et par opérateur.",
+      "Batteries Li-Ion longue durée, recharge rapide en 2h.",
+      "Largeur de travail 50cm avec squeegee anti-traces."
+    ],
+    "specs": {
+      "autonomie": "3h en continu",
+      "largeur_de_travail": "500 mm",
+      "niveau_sonore": "64 dB",
+      "poids": "48 kg"
+    },
+    "hero": "https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?auto=format&fit=crop&w=1200&q=80",
+    "reviews": [
+      { "author": "Responsable site", "note": 5, "text": "Tableau de bord précieux pour nos audits clients." },
+      { "author": "Prestataire FM", "note": 4, "text": "Format compact parfait pour les couloirs étroits." }
+    ]
+  },
+  {
+    "id": "anticalc-glass",
+    "name": "AntiCalc Glass+",
+    "category": "Hôtellerie & housekeeping",
+    "subtitle": "Anti-calcaire brillance miroir pour salles de bains",
+    "price": "14,20",
+    "description": "Nettoyant anti-calcaire avec parfum signature discret et formule rechargeable pour limiter le plastique.",
+    "tags": ["Anti-calcaire", "Brillance", "Rechargeable"],
+    "downloads": [
+      { "label": "Fiche technique", "path": "/assets/docs/fiche-technique-surface-pro.pdf" }
+    ],
+    "recommended": ["Microfibres couleurs", "Parfum d'Accueil", "Cartouche mousse main"],
+    "rating": 4.6,
+    "highlights": [
+      "Supprime les traces de calcaire et laisse un film anti-gouttes.",
+      "Recharge concentrée compatible fontaine de dilution.",
+      "Parfum discret validé pour l'hôtellerie haut de gamme."
+    ],
+    "specs": {
+      "ph": "Acide doux",
+      "parfum": "Note fraîche hôtelière",
+      "dilution": "Prêt à l'emploi ou 1/20 en centrale",
+      "conditionnement": "Flacon 750ml rechargeable"
+    },
+    "hero": "https://images.unsplash.com/photo-1505691938895-1758d7feb511?auto=format&fit=crop&w=1200&q=80",
+    "reviews": [
+      { "author": "Gouvernante", "note": 5, "text": "Moins de traces et un parfum cohérent avec la chambre." }
+    ]
+  },
+  {
+    "id": "solvoff-forte",
+    "name": "Solv'Off Forte",
+    "category": "Industrie & ateliers",
+    "subtitle": "Dégraissant solvants désaromatisés pour maintenance lourde",
+    "price": "27,90",
+    "description": "Puissant dégraissant industriel pour pièces mécaniques, sans odeur agressive et compatible fontaine.",
+    "tags": ["Solvant", "Dégraissant", "Sécurité chimique"],
+    "downloads": [
+      { "label": "FDS", "path": "/assets/docs/fiche-donnees-securite-desisafe.pdf" }
+    ],
+    "recommended": ["Absorbants granulaires", "Fontaine de dégraissage", "Gants nitrile heavy"],
+    "rating": 4.5,
+    "highlights": [
+      "Base solvants désaromatisés pour réduire l'odeur en atelier.",
+      "Action rapide sur graisses lourdes, cambouis et huiles.",
+      "Compatible fontaines de dégraissage fermées."
+    ],
+    "specs": {
+      "point_eclair": "62°C",
+      "applications": "Pièces mécaniques, sols atelier, matériel roulant",
+      "conditionnement": "Bidon 5L",
+      "pictogrammes": "SGH02 / SGH07"
+    },
+    "hero": "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=1200&q=80",
+    "reviews": [
+      { "author": "Chef d'atelier", "note": 4, "text": "Pouvoir solvant élevé sans odeur agressive." }
+    ]
+  },
+  {
+    "id": "greenshield-dose",
+    "name": "GreenShield Eco Dose",
+    "category": "RSE & environnement",
+    "subtitle": "Doses ultra-concentrées multi-usages en emballage recyclé",
+    "price": "19,90",
+    "description": "Pack de doses concentrées avec suivi d'impact CO₂ et bidons réutilisables pour réduire le plastique.",
+    "tags": ["Ecolabel", "Concentré", "Recyclé"],
+    "downloads": [
+      { "label": "Brochure", "path": "/assets/docs/notice-autolaveuse-glide.pdf" }
+    ],
+    "recommended": ["Fontaine de dilution", "Bidon réutilisable", "Formation RSE"],
+    "rating": 4.8,
+    "highlights": [
+      "Réduction plastique jusqu'à -80% grâce aux recharges poche.",
+      "Calculateur d'impact CO₂ intégré pour vos reporting RSE.",
+      "Compatible usages sols, surfaces et sanitaires."
+    ],
+    "specs": {
+      "label": "Ecolabel UE",
+      "dilution": "0,5% à 2% selon usage",
+      "conditionnement": "Boîte 30 doses",
+      "traceur": "QR code suivi impact"
+    },
+    "hero": "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=1200&q=80",
+    "reviews": [
+      { "author": "Responsable RSE", "note": 5, "text": "Enfin un calculateur simple pour piloter nos indicateurs." }
+    ]
+  },
+  {
+    "id": "microfibre-procode",
+    "name": "Microfibre ProCode",
+    "category": "Hôtellerie & housekeeping",
+    "subtitle": "Lot de microfibres codées couleur pour zones sensibles",
+    "price": "5,80",
+    "description": "Microfibres haute densité avec codes couleur pour séparer les zones chambres, sanitaires et cuisine.",
+    "tags": ["Codage couleur", "Lavable 300x", "Absorption"],
+    "downloads": [
+      { "label": "Fiche technique", "path": "/assets/docs/fiche-technique-surface-pro.pdf" }
+    ],
+    "recommended": ["AntiCalc Glass+", "DésiSafe Spectre+", "Parfum d'Accueil"],
+    "rating": 4.6,
+    "highlights": [
+      "Absorption élevée pour limiter la consommation de produit.",
+      "Code couleur conforme aux plans de nettoyage hôtellerie.",
+      "Résiste à 300 lavages industriels."
+    ],
+    "specs": {
+      "composition": "320 g/m² microfibre",
+      "dimensions": "40 x 40 cm",
+      "codes_couleur": "Rouge / Bleu / Vert / Jaune",
+      "lavage": "90°C compatible"
+    },
+    "hero": "https://images.unsplash.com/photo-1501004318641-b39e6451bec6?auto=format&fit=crop&w=1200&q=80",
+    "reviews": [
+      { "author": "Gouvernante générale", "note": 5, "text": "Tenue dans le temps + code couleur hyper clair pour l'équipe." }
+    ]
+  },
+  {
+    "id": "smartmix-station",
+    "name": "SmartMix Station 360",
+    "category": "Facility management",
+    "subtitle": "Fontaine de dilution sécurisée avec verrouillage RFID",
+    "price": "890",
+    "description": "Station murale qui dilue automatiquement les concentrés, contrôle les coûts et sécurise les accès par badge.",
+    "tags": ["Dilution", "Sécurisée", "RFID"],
+    "downloads": [
+      { "label": "Notice", "path": "/assets/docs/notice-autolaveuse-glide.pdf" }
+    ],
+    "recommended": ["GreenShield Eco Dose", "Bidons réutilisables", "Audit déploiement"],
+    "rating": 4.7,
+    "highlights": [
+      "Verrouillage RFID pour limiter les surdosages et pertes produit.",
+      "3 débits programmables (flacon, seau, autolaveuse).",
+      "Tableau de bord en ligne pour suivre la consommation par site."
+    ],
+    "specs": {
+      "debits": "3/8/15 L.min",
+      "alimentation": "Raccord eau 3/4\"",
+      "securite": "Anti-retour intégré",
+      "materiaux": "Polypropylène renforcé"
+    },
+    "hero": "https://images.unsplash.com/photo-1467003909585-2f8a72700288?auto=format&fit=crop&w=1200&q=80",
+    "reviews": [
+      { "author": "Directeur FM", "note": 5, "text": "Verrouillage par badge = moins de pertes et de litiges." }
+    ]
+  },
+  {
+    "id": "readydose-lingettes",
+    "name": "Lingettes ReadyDose EN",
+    "category": "Santé & Bloc opératoire",
+    "subtitle": "Lingettes pré-imprégnées virucides pour surfaces sensibles",
+    "price": "18,90",
+    "description": "Lingettes non tissées à usage rapide pour lits médicalisés, poignées, moniteurs et chariots de soins.",
+    "tags": ["EN14476", "Prêt à l'emploi", "Sans alcool"],
+    "downloads": [
+      { "label": "Fiche technique", "path": "/assets/docs/fiche-technique-desisafe.pdf" }
+    ],
+    "recommended": ["DésiSafe Spectre+", "Gants nitrile", "Distributeur inox"],
+    "rating": 4.8,
+    "highlights": [
+      "Virucide sans alcool pour les surfaces sensibles du bloc.",
+      "Couvercle à double étanchéité pour limiter le dessèchement.",
+      "Format nomade pour interventions extérieures."
+    ],
+    "specs": {
+      "format": "100 lingettes 20x20cm",
+      "parfum": "Sans parfum",
+      "normes": "EN14476 / EN16615",
+      "duree_action": "60 secondes"
+    },
+    "hero": "https://images.unsplash.com/photo-1587829741301-dc798b83add3?auto=format&fit=crop&w=1200&q=80",
+    "reviews": [
+      { "author": "Bloc opératoire", "note": 5, "text": "Les équipes apprécient le format et l'absence d'alcool." }
+    ]
+  },
+  {
+    "id": "ph-control-floor",
+    "name": "Détergent pH Control Floor",
+    "category": "Facility management",
+    "subtitle": "Détergent sols neutre pour autolaveuse et monobrosse",
+    "price": "22,40",
+    "description": "Nettoyant sols neutre haute performance, compatible autolaveuses et protocole bio-nettoyage léger.",
+    "tags": ["Neutre", "Sans traces", "Autolaveuse"],
+    "downloads": [
+      { "label": "Fiche technique", "path": "/assets/docs/notice-autolaveuse-glide.pdf" }
+    ],
+    "recommended": ["Autolaveuse Glide 50", "Disques haute productivité", "SmartMix Station"],
+    "rating": 4.6,
+    "highlights": [
+      "Formule neutre qui protège les revêtements et laisse zéro trace.",
+      "Moussage contrôlé pour autolaveuse ou monobrosse.",
+      "Parfum léger pour utilisations en ERP et retail."
+    ],
+    "specs": {
+      "ph": "Neutre 7",
+      "dilution": "0,5% à 1%",
+      "compatibilite": "Autolaveuse, monobrosse",
+      "conditionnement": "Bidon 5L"
+    },
+    "hero": "https://images.unsplash.com/photo-1545239351-1141bd82e8a6?auto=format&fit=crop&w=1200&q=80",
+    "reviews": [
+      { "author": "Chef de secteur FM", "note": 5, "text": "Pas de mousse dans les autolaveuses et un rendu propre." }
+    ]
+  }
+]
