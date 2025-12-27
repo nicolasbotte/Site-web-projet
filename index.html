@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HygiLog | Hygiène professionnelle réinventée</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <div class="top-bar">
+      <span>Livraison J+1 sur 80% du catalogue | Hotline Hygiène 6j/7</span>
+      <div class="hero-badges">
+        <span class="badge">Certifié ISO 14001</span>
+        <span class="badge">Support technique secteur CHR & Santé</span>
+      </div>
+    </div>
+    <nav>
+      <div class="brand">
+        <div class="brand-mark">HL</div>
+        <div>
+          <div>HygiLog</div>
+          <small style="color: var(--grey);">Expertise & Pureté</small>
+        </div>
+      </div>
+      <ul>
+        <li><a href="#vision">Vision</a></li>
+        <li><a href="#product-section">Catalogue</a></li>
+        <li><a href="#benchmark">Benchmark</a></li>
+        <li><a href="#blog-preview">Blog</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <a class="btn" href="#product-section">Découvrir le catalogue</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div>
+        <p class="badge" style="display:inline-flex; align-items:center; gap:8px; background:rgba(255,255,255,0.15);">Hygiène pro | Facility management | Hôpitaux</p>
+        <h1>La référence B2B de l'hygiène pro qui casse les codes.</h1>
+        <p>HygiLog propose aux professionnels une expérience aussi fluide qu'Amazon, avec des prix affichés en temps réel, des fiches techniques et FDS téléchargeables en un clic, et des recommandations personnalisées pour booster la rotation en point de vente ou en chantier.</p>
+        <div class="hero-badges">
+          <span class="badge">Cross-selling assisté par données</span>
+          <span class="badge">Stocks visibles en live</span>
+          <span class="badge">Notes et avis vérifiés</span>
+          <span class="badge">Identité HygiLog #Propre</span>
+        </div>
+        <div class="actions">
+          <a class="btn" href="#product-section">Voir les meilleurs vendeurs</a>
+          <a class="btn secondary" href="blog.html">Lire le blog SEO</a>
+        </div>
+      </div>
+      <div class="panel">
+        <div class="section-title">
+          <h2>Promesse HygiLog</h2>
+          <span class="badge badge-blue">Performance + Pureté</span>
+        </div>
+        <div class="grid-3">
+          <div class="card">
+            <div class="metric"><strong>+38%</strong> de paniers moyens grâce aux recommandations.</div>
+            <p>Cross-selling construit pour le secteur (EPI, consommables, machines).</p>
+          </div>
+          <div class="card">
+            <div class="metric"><strong>J+1</strong> livraison express</div>
+            <p>Réseau logistique pensé pour l'hôtellerie-restauration, santé, industrie.</p>
+          </div>
+          <div class="card">
+            <div class="metric"><strong>100%</strong> fiches téléchargeables</div>
+            <p>Fiches techniques et FDS accessibles en un clic sur chaque fiche produit.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="vision" style="padding: 24px 4vw 8px;">
+      <div class="section-title">
+        <h2>HygiLog, une UX qui bouscule le marché</h2>
+        <span class="badge">Inspiré des leaders e-commerce, adapté au terrain</span>
+      </div>
+      <div class="grid-3">
+        <div class="card">
+          <h3>Recherche ultra rapide</h3>
+          <p>Moteur par usage (cuisine pro, bloc opératoire, mobilité) et par certification (Ecolabel, contact alimentaire).</p>
+        </div>
+        <div class="card">
+          <h3>Transparence prix & stocks</h3>
+          <p>Prix nets, remises volume, stocks multi-dépôts visibles. Comme Amazon mais verticalisé.</p>
+        </div>
+        <div class="card">
+          <h3>Ergonomie "pro"</h3>
+          <p>Navigation à une main, boutons grands formats, modes clair/sombre pour les usages terrain.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="benchmark" style="padding: 24px 4vw 8px;">
+      <div class="section-title">
+        <h2>Benchmark concurrents & prises de position</h2>
+        <a class="btn secondary" href="#product-section">Parcourir le catalogue</a>
+      </div>
+      <div class="grid-3">
+        <div class="card">
+          <h3>Distributeurs historiques</h3>
+          <p>Catalogues PDF, prix sur devis, peu d'avis clients.</p>
+          <p><strong>HygiLog</strong> : prix affichés, avis vérifiés, CTA clairs, recommandation automatique.</p>
+        </div>
+        <div class="card">
+          <h3>Pure players e-commerce</h3>
+          <p>Bonne logistique mais faible contextualisation pro.</p>
+          <p><strong>HygiLog</strong> : filtres par normes, fiches FDS en 1 clic, kits métiers prêts à commander.</p>
+        </div>
+        <div class="card">
+          <h3>Marques mono-produit</h3>
+          <p>Peu de cross-selling, accompagnement limité.</p>
+          <p><strong>HygiLog</strong> : packages complets + coaching hygiène, prêts à être déployés.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="product-section">
+      <div class="section-title">
+        <h2>Catalogue premium</h2>
+        <div class="filters" id="filter-container"></div>
+      </div>
+      <div class="grid-3" id="product-grid"></div>
+    </section>
+
+    <section id="blog-preview" style="padding: 24px 4vw 24px;">
+      <div class="section-title">
+        <h2>Veille & Blog SEO Hygiène</h2>
+        <a class="btn secondary" href="blog.html">Accéder au blog</a>
+      </div>
+      <div class="grid-3">
+        <div class="card">
+          <h3>Normes HACCP en cuisine collective</h3>
+          <p>Checklist opérationnelle + sélection de produits dégraissants certifiés contact alimentaire.</p>
+        </div>
+        <div class="card">
+          <h3>Nettoyage durable en hôpital</h3>
+          <p>Équipements microfibres, protocoles quotidiens, et désinfectants à spectre large.</p>
+        </div>
+        <div class="card">
+          <h3>RSE & réduction des plastiques</h3>
+          <p>Recharges concentrées, fontaines de dilution sécurisées et KPIs de suivi.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer" id="contact">
+    <div class="footer-grid">
+      <div>
+        <div class="brand">
+          <div class="brand-mark">HL</div>
+          <div>
+            <div>HygiLog</div>
+            <small>Expertise & Pureté</small>
+          </div>
+        </div>
+        <p>Votre partenaire hygiène pour la restauration, l'hôtellerie, la santé et l'industrie.</p>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <p>hotline@hygilog.fr<br/>+33 1 80 20 20 80</p>
+        <p>Support technique 6j/7 | Démo UX sur demande</p>
+      </div>
+      <div>
+        <h4>Ressources</h4>
+        <ul style="list-style:none; padding:0; margin:0; display:grid; gap:8px;">
+          <li><a href="blog.html">Blog et guides</a></li>
+          <li><a href="#product-section">Catalogue complet</a></li>
+          <li><a href="assets/docs/fiche-technique-surface-pro.pdf" download>Télécharger une fiche type</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <div class="modal" id="product-modal" aria-hidden="true">
+    <div class="modal-content">
+      <div class="modal-header">
+        <div>
+          <h3 id="modal-title"></h3>
+          <p id="modal-subtitle" style="margin: 0; color: var(--grey);"></p>
+        </div>
+        <button class="close-btn" aria-label="Fermer" onclick="closeModal()">✕</button>
+      </div>
+      <div class="split">
+        <div>
+          <p id="modal-description"></p>
+          <div class="tags" id="modal-tags"></div>
+          <div class="downloads" id="modal-downloads"></div>
+          <div class="reco" id="modal-reco"></div>
+        </div>
+        <div>
+          <div class="panel" style="padding:18px;">
+            <h4>Notes & Avis</h4>
+            <div id="modal-rating" style="font-weight:700;"></div>
+            <div class="review-list" id="review-list"></div>
+            <form id="review-form">
+              <input type="text" name="name" placeholder="Votre nom" required />
+              <select name="rating" required>
+                <option value="5">5 - Excellent</option>
+                <option value="4">4 - Très bien</option>
+                <option value="3">3 - Moyen</option>
+                <option value="2">2 - À améliorer</option>
+                <option value="1">1 - Insuffisant</option>
+              </select>
+              <textarea name="comment" rows="3" placeholder="Votre retour" required></textarea>
+              <button class="btn" type="submit">Publier l'avis</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
