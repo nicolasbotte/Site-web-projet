@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Catalogue HygiLog | Produits & Solutions</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <div class="top-bar">
+      <span>Catalogue temps réel, fiches techniques & FDS téléchargeables.</span>
+      <div class="hero-badges">
+        <span class="badge">Stocks multi-dépôts</span>
+        <span class="badge">Livraison J+1</span>
+      </div>
+    </div>
+    <nav>
+      <div class="brand">
+        <div class="brand-mark">HL</div>
+        <div>
+          <div>HygiLog</div>
+          <small style="color: var(--grey);">Catalogue complet</small>
+        </div>
+      </div>
+      <ul>
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="#product-section">Catalogue</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="blog.html">Blog</a></li>
+      </ul>
+      <a class="btn" href="#product-section">Parcourir les références</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" style="margin-top:16px;">
+      <div>
+        <p class="badge" style="display:inline-flex; align-items:center; gap:8px; background:rgba(255,255,255,0.15);">Catalogue HygiLog 100% digital</p>
+        <h1>Une page dédiée pour explorer toutes nos références.</h1>
+        <p>Filtres par usage et conformité, fiches techniques en un clic, avis vérifiés et recommandations pour optimiser vos chantiers, cuisines ou établissements de santé.</p>
+        <div class="hero-badges">
+          <span class="badge">Recherche par normes</span>
+          <span class="badge">Cross-selling automatisé</span>
+          <span class="badge">FDS & fiches techniques intégrées</span>
+        </div>
+        <div class="actions">
+          <a class="btn" href="#product-section">Découvrir le catalogue</a>
+          <a class="btn secondary" href="index.html#contact">Contacter un expert</a>
+        </div>
+      </div>
+      <div class="panel" style="background: rgba(255,255,255,0.95); color: var(--navy);">
+        <div class="section-title" style="margin-top:0;">
+          <h2 style="margin:0;">Pourquoi un espace dédié ?</h2>
+          <span class="badge badge-blue">UX pro</span>
+        </div>
+        <div class="grid-3">
+          <div class="card" style="box-shadow:none; border:1px solid rgba(12,39,71,0.08);">
+            <div class="metric"><strong>100%</strong> fiches techniques et FDS accessibles.</div>
+            <p>Chaque produit propose ses documents téléchargeables pour vos audits et contrôles.</p>
+          </div>
+          <div class="card" style="box-shadow:none; border:1px solid rgba(12,39,71,0.08);">
+            <div class="metric"><strong>Filtres</strong> par usage, normes et secteurs.</div>
+            <p>Identifiez immédiatement les solutions adaptées à la restauration, santé ou FM.</p>
+          </div>
+          <div class="card" style="box-shadow:none; border:1px solid rgba(12,39,71,0.08);">
+            <div class="metric"><strong>Avis</strong> vérifiés + recommandations.</div>
+            <p>Notes consolidées et cross-selling pour sécuriser vos paniers et budgets.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="services" style="padding: 24px 4vw 8px;">
+      <div class="section-title">
+        <h2>Services hygiène inclus avec le catalogue</h2>
+        <span class="badge">Accompagnement 6j/7</span>
+      </div>
+      <div class="grid-3">
+        <div class="card">
+          <h3>Hotline technique</h3>
+          <p>Réponse immédiate sur les normes, compatibilités et protocoles de nettoyage selon votre secteur.</p>
+        </div>
+        <div class="card">
+          <h3>Livraison optimisée</h3>
+          <p>Visibilité en temps réel des stocks, livraison J+1 sur 80% du catalogue, suivi colisage.</p>
+        </div>
+        <div class="card">
+          <h3>Audit hygiène</h3>
+          <p>Visite site ou visio pour valider vos choix produits, réduire les coûts et sécuriser les équipes.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="product-section">
+      <div class="section-title">
+        <h2>Catalogue complet</h2>
+        <div class="filters" id="filter-container"></div>
+      </div>
+      <div id="catalog-status" class="catalog-status" aria-live="polite"></div>
+      <div class="grid-3" id="product-grid"></div>
+    </section>
+
+    <section style="padding: 24px 4vw 40px;">
+      <div class="panel" style="display:flex; flex-wrap:wrap; justify-content:space-between; gap:16px; align-items:center;">
+        <div>
+          <h3 style="margin:0 0 8px;">Besoin d'un devis ou d'une démonstration ?</h3>
+          <p style="margin:0; color:var(--grey);">Contactez un expert HygiLog pour configurer votre panier et planifier vos livraisons.</p>
+        </div>
+        <div class="actions" style="display:flex; gap:10px; align-items:center;">
+          <a class="btn" href="mailto:hotline@hygilog.fr">Écrire à la hotline</a>
+          <a class="btn secondary" href="index.html#contact">Coordonnées complètes</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer" id="contact">
+    <div class="footer-grid">
+      <div>
+        <div class="brand">
+          <div class="brand-mark">HL</div>
+          <div>
+            <div>HygiLog</div>
+            <small>Expertise & Pureté</small>
+          </div>
+        </div>
+        <p>Votre partenaire hygiène pour la restauration, l'hôtellerie, la santé et l'industrie.</p>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <p>hotline@hygilog.fr<br/>+33 1 80 20 20 80</p>
+        <p>Support technique 6j/7 | Démo UX sur demande</p>
+      </div>
+      <div>
+        <h4>Navigation</h4>
+        <ul style="list-style:none; padding:0; margin:0; display:grid; gap:8px;">
+          <li><a href="#product-section">Catalogue</a></li>
+          <li><a href="index.html#vision">Vision</a></li>
+          <li><a href="blog.html">Blog expert</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <div class="modal" id="product-modal" aria-hidden="true">
+    <div class="modal-content">
+      <div class="modal-header">
+        <div>
+          <h3 id="modal-title"></h3>
+          <p id="modal-subtitle" style="margin: 0; color: var(--grey);"></p>
+        </div>
+        <button class="close-btn" aria-label="Fermer" onclick="closeModal()">✕</button>
+      </div>
+      <div class="split">
+        <div>
+          <p id="modal-description"></p>
+          <div class="tags" id="modal-tags"></div>
+          <div class="downloads" id="modal-downloads"></div>
+          <div class="reco" id="modal-reco"></div>
+        </div>
+        <div>
+          <div class="panel" style="padding:18px;">
+            <h4>Notes & Avis</h4>
+            <div id="modal-rating" style="font-weight:700;"></div>
+            <div class="review-list" id="review-list"></div>
+            <form id="review-form">
+              <input type="text" name="name" placeholder="Votre nom" required />
+              <select name="rating" required>
+                <option value="5">5 - Excellent</option>
+                <option value="4">4 - Très bien</option>
+                <option value="3">3 - Moyen</option>
+                <option value="2">2 - À améliorer</option>
+                <option value="1">1 - Insuffisant</option>
+              </select>
+              <textarea name="comment" rows="3" placeholder="Votre retour" required></textarea>
+              <button class="btn" type="submit">Publier l'avis</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
