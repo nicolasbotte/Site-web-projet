@@ -3,7 +3,7 @@
 Prototype statique d'un site e-commerce B2B pour la marque HygiLog (hygiène professionnelle). Le site met en avant l'ergonomie, les prix visibles, les fiches techniques/FDS téléchargeables et un blog SEO.
 
 ## Fichiers
-- `index.html` : page d'accueil, catalogue interactif, benchmark concurrent, avis.
+- `index.html` : page d'accueil, catalogue interactif et avis.
 - `blog.html` : page de blog optimisée pour les mots-clés du secteur.
 - `style.css` : direction artistique inspirée des codes HygiLog (bleu, vert, gris).
 - `script.js` : génération du catalogue, filtres, recommandations, modal d'avis et récupération du catalogue externe
